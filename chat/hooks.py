@@ -2,7 +2,7 @@ from . import __version__ as app_version
 from frappe import __version__ as frappe_version
 
 app_name = "chat"
-app_title = "Frappe Chat"
+app_title = "Consistent Helpdesk"
 app_publisher = "Frappe Technologies"
 app_description = "Chat application for frappe"
 app_icon = "octicon octicon-file-directory"
@@ -16,7 +16,7 @@ is_frappe_above_v13 = int(frappe_version.split('.')[0]) > 13
 # ------------------
 
 # include js, css files in header of desk.html
-app_include_css = ['chat.bundle.css'] if is_frappe_above_v13 else [
+app_include_css = ['chat.bundle.css'] if is_frappe_above_v13 else [ 
     '/assets/css/chat.css']
 app_include_js = ['chat.bundle.js'] if is_frappe_above_v13 else [
     '/assets/js/chat.js']
